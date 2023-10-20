@@ -1,10 +1,10 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
-    "description": "Chrome extension that uses ai to generate a map from a website's source code",
+    "name": "MapMe",
+    "description": "Chrome extension that uses AI to generate a map from a website's source code",
     "version": "1.0",
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "mapme-icon-32x32.ico"
+        "default_icon": "mapme-icon.png"
     }
 }

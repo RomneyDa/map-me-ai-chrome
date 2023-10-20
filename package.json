@@ -1,0 +1,25 @@
+{
+  "name": "map-me-ai-chrome",
+  "version": "0.0.1",
+  "description": "Chrome extension that uses AI to generate a map from a website's source code",
+  "main": "mapMe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomneyDa/map-me-ai-chrome.git"
+  },
+  "keywords": [
+    "map",
+    "ai",
+    "google",
+    "maps"
+  ],
+  "author": "Dallin Romney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RomneyDa/map-me-ai-chrome/issues"
+  },
+  "homepage": "https://github.com/RomneyDa/map-me-ai-chrome#readme"
+}
