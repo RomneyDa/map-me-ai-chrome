@@ -12,5 +12,15 @@
         "32": "images/mapme-icon-32.png",
         "48": "images/mapme-icon-48.png",
         "128": "images/mapme-icon-128.png"
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "scripts/content.js"
+            ]
+        }
+    ]
 }
