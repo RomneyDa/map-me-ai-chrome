@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/RomneyDa/map-me-ai-chrome/issues"
   },
-  "homepage": "https://github.com/RomneyDa/map-me-ai-chrome#readme"
+  "homepage": "https://github.com/RomneyDa/map-me-ai-chrome#readme",
+  "dependencies": {
+    "chrome-types": "^0.1.233"
+  }
 }

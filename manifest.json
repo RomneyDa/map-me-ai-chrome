@@ -5,6 +5,12 @@
     "version": "1.0",
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "mapme-icon.png"
+        "default_icon": "images/mapme-icon-48.png"
+    },
+    "icons": {
+        "16": "images/mapme-icon-16.png",
+        "32": "images/mapme-icon-32.png",
+        "48": "images/mapme-icon-48.png",
+        "128": "images/mapme-icon-128.png"
     }
 }
