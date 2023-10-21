@@ -1,26 +1,46 @@
 {
-    "manifest_version": 3,
-    "name": "MapMe",
-    "description": "Chrome extension that uses AI to generate a map from a website's source code",
-    "version": "1.0",
-    "action": {
-        "default_popup": "popup.html",
-        "default_icon": "images/mapme-icon-48.png"
+  "manifest_version": 3,
+  "name": "MapMe",
+  "description": "Chrome extension that uses AI to generate a map from a website's source code",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup/map_popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "24": "icons/24.png",
+      "32": "icons/32.png"
     },
-    "icons": {
-        "16": "images/mapme-icon-16.png",
-        "32": "images/mapme-icon-32.png",
-        "48": "images/mapme-icon-48.png",
-        "128": "images/mapme-icon-128.png"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": [
-                "scripts/content.js"
-            ]
-        }
-    ]
+    "default_title": "MapMe"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabGroups",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://developer.chrome.com/*"
+  ],
+  "options_page": "options/options.html",
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  }
 }

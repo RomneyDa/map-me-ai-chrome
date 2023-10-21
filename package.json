@@ -4,7 +4,11 @@
   "description": "Chrome extension that uses AI to generate a map from a website's source code",
   "main": "mapMe.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist/*",
+    "make-manifest": "rm -f dist/manifest.json && ts-node src/manifest.ts",
+    "copy-static": "copyfiles -u 1 \"src/**/*.{css,html}\" \"dist/\"",
+    "build": "npm run clean && tsc && npm run copy-static && npm run make-manifest"
   },
   "repository": {
     "type": "git",
@@ -24,5 +28,12 @@
   "homepage": "https://github.com/RomneyDa/map-me-ai-chrome#readme",
   "dependencies": {
     "chrome-types": "^0.1.233"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.248",
+    "@types/google.maps": "^3.54.4",
+    "copyfiles": "^2.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
