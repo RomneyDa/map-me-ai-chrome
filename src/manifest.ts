@@ -6,9 +6,9 @@ const manifest = {
     "action": {
         "default_popup": "popup/map_popup.html",
         "default_icon": {
-            "16": "icons/16.png",
-            "32": "icons/32.png",
-            "24": "icons/24.png"
+            "16": "assets/16.png",
+            "32": "assets/32.png",
+            "24": "assets/24.png"
         },
         "default_title": "MapMe"
     },
@@ -16,10 +16,10 @@ const manifest = {
         "service_worker": "service-worker.js"
     },
     "icons": {
-        "16": "icons/16.png",
-        "32": "icons/32.png",
-        "48": "icons/48.png",
-        "128": "icons/128.png"
+        "16": "assets/16.png",
+        "32": "assets/32.png",
+        "48": "assets/48.png",
+        "128": "assets/128.png"
     },
     "content_scripts": [
         {
