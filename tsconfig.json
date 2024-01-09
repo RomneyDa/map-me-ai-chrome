@@ -2,10 +2,13 @@
     "compilerOptions": {
         "target": "es6",
         "sourceMap": false,
-        "outDir": "dist"
+        "outDir": "dist",
+        "module": "commonjs",
     },
     "exclude": [
-        "node_modules",
-        "src/manifest.ts"
+        "node_modules/**",
+        "src/manifest.ts",
+        "src/modules.js",
+        "module-config.js"
     ]
 }

@@ -36,6 +36,7 @@ const manifest = {
                 "<all_urls>"
             ],
             "js": [
+                "modules/html-to-text.js",
                 "scripts/content.js"
             ]
         }
