@@ -5,7 +5,6 @@ const manifest = {
     // "version_name": "1.0 beta",
     "description": "Opens current tab's URL in MapThis.AI",
 
-    // TODO - flesh out action
     "action": {
         // "default_popup": "popup/popup.html", (can also add popup.css/js/ts and load popup script in popup.html)
         "default_icon": {
