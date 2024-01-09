@@ -10,7 +10,8 @@ const manifest = {
         "default_icon": {
             "16": "assets/icon-16.png",
             "32": "assets/icon-32.png",
-            "24": "assets/icon-24.png"
+            "48": "assets/icon-48.png",
+            "128": "assets/icon-128.png"
         },
         "default_title": "MapThis"
     },
@@ -24,11 +25,6 @@ const manifest = {
         "48": "assets/icon-48.png",
         "128": "assets/icon-128.png"
     },
-    "options_page": "options/options.html",
-    "options_ui": {
-        "page": "options/options.html",
-        "open_in_tab": false,
-    },
     "permissions": [
         "tabs",
         // "storage",
@@ -36,6 +32,11 @@ const manifest = {
         // "scripting"
         // "tabGroups",
     ],
+    // "options_page": "options/options.html",
+    // "options_ui": {
+    //     "page": "options/options.html",
+    //     "open_in_tab": false,
+    // },
     // "default_locale": "en",
     // "content_scripts": [
     //     {
