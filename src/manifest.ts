@@ -31,8 +31,8 @@ const manifest = {
     },
     "permissions": [
         "tabs",
-        "storage",
-        "notifications",
+        // "storage",
+        // "notifications",
         // "scripting"
         // "tabGroups",
     ],
