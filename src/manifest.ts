@@ -1,29 +1,29 @@
 const manifest = {
     "manifest_version": 3,
-    "name": "MapMe",
+    "name": "MapThis.AI",
     "version": "1.0",
     // "version_name": "1.0 beta",
-    "description": "Chrome extension that uses AI to generate a map from a website's source code",
+    "description": "Opens current tab's URL in MapThis.AI",
 
     // TODO - flesh out action
     "action": {
-        "default_popup": "popup/map_popup.html",
+        // "default_popup": "popup/map_popup.html",
         "default_icon": {
             "16": "assets/icon-16.png",
             "32": "assets/icon-32.png",
             "24": "assets/icon-24.png"
         },
-        "default_title": "MapMe"
+        "default_title": "MapThis"
     },
     "background": {
         "service_worker": "service-worker.js"
     },
 
-    "options_page": "options/options.html",
-    "options_ui": {
-        "page": "options/options.html",
-        "open_in_tab": false,
-    },
+    // "options_page": "options/options.html",
+    // "options_ui": {
+    //     "page": "options/options.html",
+    //     "open_in_tab": false,
+    // },
     "icons": {
         "16": "assets/icon-16.png",
         "32": "assets/icon-32.png",
@@ -36,7 +36,7 @@ const manifest = {
                 "<all_urls>"
             ],
             "js": [
-                "modules/html-to-text.js",
+                // "modules/example-module.js",
                 "scripts/content.js"
             ]
         }
@@ -44,8 +44,9 @@ const manifest = {
 
     // TODO - check all permissions
     "permissions": [
-        "tabGroups",
-        "storage"
+        "activeTab",
+        // "tabGroups",
+        // "storage"
     ],
     "host_permissions": [
         "https://developer.chrome.com/*"
