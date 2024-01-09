@@ -7,7 +7,7 @@ const manifest = {
 
     // TODO - flesh out action
     "action": {
-        // "default_popup": "popup/map_popup.html",
+        // "default_popup": "popup/popup.html", (can also add popup.css/js/ts and load popup script in popup.html)
         "default_icon": {
             "16": "assets/icon-16.png",
             "32": "assets/icon-32.png",
@@ -18,46 +18,43 @@ const manifest = {
     "background": {
         "service_worker": "service-worker.js"
     },
-
-    // "options_page": "options/options.html",
-    // "options_ui": {
-    //     "page": "options/options.html",
-    //     "open_in_tab": false,
-    // },
+    "author": "dallinromney@gmail.com",
     "icons": {
         "16": "assets/icon-16.png",
         "32": "assets/icon-32.png",
         "48": "assets/icon-48.png",
         "128": "assets/icon-128.png"
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": [
-                // "modules/example-module.js",
-                "scripts/content.js"
-            ]
-        }
-    ],
-
-    // TODO - check all permissions
+    "options_page": "options/options.html",
+    "options_ui": {
+        "page": "options/options.html",
+        "open_in_tab": false,
+    },
     "permissions": [
-        "activeTab",
+        "tabs",
+        "storage",
+        "notifications",
+        // "scripting"
         // "tabGroups",
-        // "storage"
     ],
-    "host_permissions": [
-        "https://developer.chrome.com/*"
-    ],
+    // "default_locale": "en",
+    // "content_scripts": [
+    //     {
+    //         "matches": [
+    //             "<all_urls>"
+    //         ],
+    //         "js": [
+    //             // "modules/example-module.js",
+    //             "scripts/content.js"
+    //         ]
+    //     }
+    // ],
+    // "host_permissions": [
+    //     "https://developer.chrome.com/*"
+    // ],
     // "optional_permissions": [],
     // "optional_host_permissions": [],
     // "web_accessible_resources": [...]
-
-    // "default_locale": "en",
-    "author": "dallinromney@gmail.com",
-
     // "background": {...},
     // "chrome_settings_overrides": {...},
     // "chrome_url_overrides": {...},

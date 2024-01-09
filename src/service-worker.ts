@@ -1,14 +1,25 @@
 chrome.action.onClicked.addListener((tab) => {
-    // chrome.action.setTitle({ tabId: tab.id, title: `You are on tab: ${tab.id}` });
-    console.log("MapThisChrome: Clicked")
-});
+    chrome.tabs.create({ url: `https://mapthis.ai/?url=${encodeURIComponent(tab.url)}` })
+})
 
-// Badge
-// chrome.action.setBadgeBackgroundColor({color: [255, 0, 0, 255]});
-// chrome.action.setBadgeText({text: 'M'});
+chrome.tabs.onUpdated.addListener(function
+    (tabId, changeInfo, tab) {
+    if (!changeInfo.url.startsWith('http')) {
+        chrome.action.disable(tabId)
+        chrome.action.setTitle({ title: "Can't map this page" })
+    } else {
+        chrome.action.enable(tabId)
+        chrome.action.setTitle({ title: "Map this" })
+    }
+}
+);
 
-// Unused
-// chrome.action.setIcon() // programatically set icon
-// chrome.action.setTitle() // programatically set title/tooltip (same as action default_title in manifest.json)
-
-
+// chrome.tabs.onActivated.addListener(function (activeInfo) {
+//     chrome.tabs.get(activeInfo.tabId, function (tab) {
+//         if (!tab?.url?.startsWith('http')) {
+//             chrome.action.disable(activeInfo.tabId)
+//         } else {
+//             chrome.action.enable(activeInfo.tabId)
+//         }
+//     })
+// });
